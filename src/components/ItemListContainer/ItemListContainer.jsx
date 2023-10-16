@@ -1,9 +1,14 @@
-import React from "react";
+import { Button } from "react-bootstrap";
+import Render from "./Render";
+import { itemService } from "../../services/list";
 
-const ItemListContainer = ({ greetings }) => {
+const ItemListContainer = ({ greeting }) => {
+  const items = itemService.getDatas();
   return (
-    <div className="container">
-      <h3 className="text-center m-5">{greetings}</h3>
+    <div>
+      <h1 className="text-center">{greeting}</h1>
+      <h2 className="text-center">Productos:</h2>
+      <Render items={items} />
     </div>
   );
 };
