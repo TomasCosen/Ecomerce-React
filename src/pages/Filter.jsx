@@ -1,5 +1,6 @@
 import React from 'react';
 import { itemService } from '../services/list'; // Asegúrate de importar el servicio adecuado
+import Render from '../components/ItemListContainer/Render';
 
 const ItemsFiltered = () => {
   const ids = [1, 2, 3, 4, 6, 8, 11, 12, 13, 15]; // Los IDs que deseas mostrar
@@ -9,17 +10,7 @@ const ItemsFiltered = () => {
 
   return (
     <div>
-      <h2>Elementos a mostrar:</h2>
-      <ul>
-        {filteredItems.map(item => (
-          <li key={item.id}>
-            <p>Nombre: {item.name}</p>
-            <p>Precio: {item.price}</p>
-            <p>Descripción: {item.description}</p>
-            <p>Descripción extendida: {item.descriptionExt}</p>
-          </li>
-        ))}
-      </ul>
+      <Render items={filteredItems}/>
     </div>
   );
 };
