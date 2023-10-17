@@ -1,9 +1,6 @@
 import React from "react";
-import Render from "../components/ItemListContainer/Render";
-import { itemService } from "../services/list";
 import ItemsFiltered from "./Filter";
 const AlimentosAG = () => {
-  const items = itemService.getDatas();
 
   return (
     <div className="container">
