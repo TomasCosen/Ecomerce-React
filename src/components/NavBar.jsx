@@ -8,7 +8,7 @@ const NavBar = () => {
     <NavbarBS expand="lg" className="bg-body-tertiary">
       <Container>
         <NavbarBS.Brand as={NavLink} to="/">
-          <img src="./img/logo-png.png" alt="logo" height={100}/>
+          <img src="../img/logo-png.png" alt="logo" height={100}/>
         </NavbarBS.Brand>
         <NavbarBS.Toggle aria-controls="basic-navbar-nav" />
         <NavbarBS.Collapse id="basic-navbar-nav">

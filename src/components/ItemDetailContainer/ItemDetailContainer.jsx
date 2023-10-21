@@ -10,9 +10,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     setItem(itemService.getData(id));
   }, [id]);
-  return (
-    <ItemDetail item={item}/>
-  );
+  return <ItemDetail item={item} />;
 };
 
 export default ItemDetailContainer;

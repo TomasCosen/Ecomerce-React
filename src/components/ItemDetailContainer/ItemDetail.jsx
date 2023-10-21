@@ -2,10 +2,17 @@ const ItemDetail = ({ item }) => {
   return (
     <>
       <div className="container">
-        <h2>Producto: {`${item.name}`} </h2>
-        <img src={`${item.img}`} alt={`${item.name}`} />
-        <h3>Precio:{`$${item.price}`}</h3>
-        <p>Descripción: {`${item.descriptionExt}`}</p>
+        <div className="producto-detalle">
+          <img src={`${item.img}`} alt={`${item.name}`} />
+          <div>
+            <h3 className="titulo">Producto: {`${item.name}`} </h3>
+            <p className="descripcion">
+              Descripción: {`${item.descriptionExt}`}
+            </p>
+            <p className="categoria">Categoría: {item.category}</p>
+            <p className="precio">Precio:{`$${item.price}`}</p>
+          </div>
+        </div>
       </div>
     </>
   );
