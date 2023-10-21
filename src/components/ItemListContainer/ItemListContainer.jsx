@@ -10,7 +10,7 @@ const ItemListContainer = ({ greeting }) => {
   }, []);
 
   return (
-    <div className="container">
+    <div>
       <h1 className="text-center">{greeting}</h1>
       <ItemList items={items} />
     </div>

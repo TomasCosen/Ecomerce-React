@@ -5,6 +5,11 @@
   font-family: sans-serif;
 }
 
+:root {
+  --clr-main: #268bc9;
+  --clr-main-light: #b3caf5;
+}
+
 .container {
   max-width: 1140px;
   padding-inline: 1.5rem;
@@ -13,6 +18,9 @@
 
 .main-title {
   margin-top: 2rem;
+}
+.navbar {
+  background-color: var(--clr-main);
 }
 
 .productos {
@@ -51,8 +59,8 @@
   transition: 0.2s;
 }
 .producto .ver-mas:hover {
-  background-color: black;
-  color: white;
+  background-color: wheat;
+  color: black;
 }
 .producto-detalle {
   padding-block: 2rem;
@@ -79,5 +87,3 @@
   margin-top: 2rem;
   font-weight: 600;
 }
-
-

@@ -5,7 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 const NavBar = () => {
   const cartItemCount = 5;
   return (
-    <NavbarBS expand="lg" className="bg-body-tertiary">
+    <NavbarBS expand="lg" className="navbar">
       <Container>
         <NavbarBS.Brand as={NavLink} to="/">
           <img src="../img/logo-png.png" alt="logo" height={100}/>
