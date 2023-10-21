@@ -7,6 +7,8 @@ const getDatas = () => {
     price: data.price,
     description: data.description,
     descriptionExt: data.descriptionExt,
+    category: data.category,
+    img: data.img,
   }));
   return list;
 };
