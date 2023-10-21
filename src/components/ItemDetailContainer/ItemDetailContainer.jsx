@@ -1,21 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { itemService } from "../../services/list";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const item = itemService.getData(id);
-  console.log(item);
-  return (
-    <>
-    <div className="container">
+  const [item, setItem] = useState([]);
 
-      <h2>Producto: {`${item.name}`} </h2>
-      <img src={`${item.img}`} alt={`${item.name}`} />
-      <h3>Precio:{`$${item.price}`}</h3>
-      <p>Descripción: {`${item.descriptionExt}`}</p>
-    </div>
-    </>
+  useEffect(() => {
+    setItem(itemService.getData(id));
+  }, [id]);
+  return (
+    <ItemDetail item={item}/>
   );
 };
 

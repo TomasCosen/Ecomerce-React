@@ -24,6 +24,7 @@ const Render = ({ items }) => {
   };
   return (
     <>
+      <h2 className="text-center">Productos:</h2>
       <Table>
         <thead>
           <tr>
