@@ -8,6 +8,7 @@ const getDatas = () => {
     description: data.description,
     descriptionExt: data.descriptionExt,
     category: data.category,
+    macro: data.Macro,
     img: data.img,
   }));
   return list;

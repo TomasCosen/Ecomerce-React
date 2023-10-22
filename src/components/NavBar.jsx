@@ -16,8 +16,14 @@ const NavBar = () => {
             <NavLink className={"nav-link"} to="/">
               Inicio
             </NavLink>
-            <NavLink className={"nav-link"} to="/alimentos">
-              A Granel
+            <NavLink className={"nav-link"} to="/productos/Carbohidratos">
+              Carbohidrato
+            </NavLink>
+            <NavLink className={"nav-link"} to="/productos/Grasas Saludables">
+              Grasas Saludables
+            </NavLink>
+            <NavLink className={"nav-link"} to="/productos/Proteínas">
+              Proteínas
             </NavLink>
             <NavLink className={"nav-link"} to="/contact">
               Contacto
