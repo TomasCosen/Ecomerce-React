@@ -9,6 +9,7 @@ const dieteticaItems = [
     category: "Cereales",
     Macro: "Carbohidratos",
     img: "https://www.recetasnestle.com.co/sites/default/files/styles/crop_article_banner_desktop_nes/public/2022-03/avena.jpg_3.jpg?itok=X0bmSHoj",
+    stock:20
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const dieteticaItems = [
     category: "Semillas",
     Macro: "Grasas Saludables",
     img: "https://www.pharmacius.com/blog/wp-content/uploads/2021/11/Semillas-de-chi%CC%81a.jpeg",
+    stock:20
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const dieteticaItems = [
     category: "Legumbres",
     Macro: "Proteínas",
     img: "https://www.antojoentucocina.com/wp-content/uploads/2020/09/lentejas-1.jpg",
+    stock:20
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ const dieteticaItems = [
     category: "Cereales",
     Macro: "Proteínas",
     img: "https://lascameliaslp.com.ar/wp-content/uploads/quinoa-real2-1-scaled.jpg",
+    stock:20
   },
   {
     id: 5,
@@ -54,6 +58,7 @@ const dieteticaItems = [
     category: "Aceites",
     Macro: "Grasas Saludables",
     img: "https://fotos.perfil.com/2022/07/13/trim/1280/720/aceite-de-oliva-1385783.jpg",
+    stock:20
   },
   {
     id: 6,
@@ -65,6 +70,7 @@ const dieteticaItems = [
     category: "Frutos Secos",
     Macro: "Grasas Saludables",
     img: "https://www.lavanguardia.com/files/og_thumbnail/uploads/2021/03/05/604204064a61a.jpeg",
+    stock:20
   },
   {
     id: 7,
@@ -76,6 +82,7 @@ const dieteticaItems = [
     category: "Productos Lácteos",
     Macro: "Proteínas",
     img: "https://imag.bonviveur.com/yogur-griego.jpg",
+    stock:20
   },
   {
     id: 8,
@@ -87,6 +94,7 @@ const dieteticaItems = [
     category: "Verduras",
     Macro: "Carbohidratos",
     img: "https://www.cocinacaserayfacil.net/wp-content/uploads/2018/10/Cocer-espinacas.jpg",
+    stock:20
   },
   {
     id: 9,
@@ -98,6 +106,7 @@ const dieteticaItems = [
     category: "Endulzantes",
     Macro: "Carbohidratos",
     img: "https://www.clarin.com/2016/04/14/ByXgGZ54g_1256x620.jpg",
+    stock:20
   },
   {
     id: 10,
@@ -109,6 +118,7 @@ const dieteticaItems = [
     category: "Productos Veganos",
     Macro: "Proteínas",
     img: "https://t1.uc.ltmcdn.com/es/posts/7/2/1/tofu_que_es_propiedades_y_recetas_52127_orig.jpg",
+    stock:20
   },
   {
     id: 11,
@@ -120,6 +130,7 @@ const dieteticaItems = [
     category: "Encurtidos",
     Macro: "Grasas Saludables",
     img: "https://recetasdecocina.elmundo.es/wp-content/uploads/2023/02/aceitunas-verdes.jpg",
+    stock:20
   },
   {
     id: 12,
@@ -131,6 +142,7 @@ const dieteticaItems = [
     category: "Harinas Sin Gluten",
     Macro: "Grasas Saludables",
     img: "https://acdn.mitiendanube.com/stores/001/172/573/products/harina-de-almendras1-4d993e44b85fbeb45c15887161412979-640-0.jpg",
+    stock:20
   },
   {
     id: 13,
@@ -142,6 +154,7 @@ const dieteticaItems = [
     category: "Especias",
     Macro: "Carbohidratos",
     img: "https://www.clarin.com/2018/05/06/S1J1sgAaG_1256x620__1.jpg",
+    stock:20
   },
   {
     id: 14,
@@ -153,6 +166,7 @@ const dieteticaItems = [
     category: "Productos Veganos",
     Macro: "Grasas Saludables",
     img: "https://www.paulinacocina.net/wp-content/uploads/2021/11/leche-de-almendras.jpg",
+    stock:20
   },
   {
     id: 15,
@@ -164,6 +178,7 @@ const dieteticaItems = [
     category: "Semillas",
     Macro: "Grasas Saludables",
     img: "https://d2r9epyceweg5n.cloudfront.net/stores/097/859/products/semillas-girasol1-d0377f52d6d05801d715250576242001-1024-1024.jpg",
+    stock:20
   },
 ];
 
