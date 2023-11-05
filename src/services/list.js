@@ -1,4 +1,4 @@
-import datas from "../data/lista";
+import datas from "../data/lista.json";
 
 const getDatas = () => {
   const list = datas.map((data) => ({

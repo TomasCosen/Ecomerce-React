@@ -1,9 +1,8 @@
 import { Navbar as NavbarBS, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
+import CartWidget from "./CartWidget/CartWidget";
 
 const NavBar = () => {
-  const cartItemCount = 5;
   return (
     <NavbarBS expand="lg" className="navbar">
       <Container>
@@ -28,12 +27,7 @@ const NavBar = () => {
             <NavLink className={"nav-link"} to="/contact">
               Contacto
             </NavLink>
-          </Nav>
-          <Nav>
-            <NavLink as={NavLink} to="/cart">
-              <FaShoppingCart />{" "}
-              <span className="badge-dark">{cartItemCount}</span>
-            </NavLink>
+            <CartWidget/>
           </Nav>
         </NavbarBS.Collapse>
       </Container>
