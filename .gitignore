@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# keys
+
+/src/firebase/key_service_account.json
+/src/firebase/config.js
