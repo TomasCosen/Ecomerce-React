@@ -1,11 +1,29 @@
+import { addDoc, collection } from "firebase/firestore";
 import { useForm } from "react-hook-form";
+import { db } from "../../firebase/config";
+import { useState } from "react";
 
 const Contacto = () => {
+  const [contactoId, setContactoId] = useState("")
   const { register, handleSubmit } = useForm();
 
   const enviar = (data) => {
-    console.log(data);
+    const contacto = {
+      cliente: data
+    }
+    const contactoRef = collection( db, "Contacto");
+    addDoc(contactoRef, contacto)
+      .then((doc) => {
+        setContactoId(doc.id);
+      })
   };
+  if(contactoId){
+    return(
+      <div className="container">
+        <h1 className="main-title">Será contactado a la brevedad, Muchas gracias!</h1>
+      </div>
+    )
+  }
   return (
     <div className="container">
       <h1 className="main-title">Contacto</h1>
