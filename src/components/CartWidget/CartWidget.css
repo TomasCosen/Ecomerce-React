@@ -1,4 +1,10 @@
-.cart-widget {
-  font-size: 30px;
-  color: black;
+.cart-widget{
+  position: absolute;
+  right: 20px;
+}
+.cart-widget a{
+  color: white;
+}
+.cart-icon{
+  font-size: 2rem;
 }

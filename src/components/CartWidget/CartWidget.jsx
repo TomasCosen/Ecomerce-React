@@ -8,10 +8,10 @@ import { NavLink } from "react-router-dom";
 const CartWidget = () => {
   const {cantidadEnCarrito} = useContext(CartContext)
   return (
-    <div>
+    <div className="cart-widget">
       <NavLink className="nav-link" to="/cart">
-        <FontAwesomeIcon icon={faShoppingCart} />
-        <span className="badge bg-dark">{cantidadEnCarrito()}</span>
+        <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
+        <span className="badge bg-dark cart-number">{cantidadEnCarrito()}</span>
       </NavLink>
     </div>
   );

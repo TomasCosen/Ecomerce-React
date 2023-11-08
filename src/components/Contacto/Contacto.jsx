@@ -17,6 +17,11 @@ const Contacto = () => {
         />
         <input
           type="text"
+          placeholder="Ingresá tu apellido"
+          {...register("apellido")}
+        />
+        <input
+          type="text"
           placeholder="Ingresá tu e-mail"
           {...register("email")}
         />

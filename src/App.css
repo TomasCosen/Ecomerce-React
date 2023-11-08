@@ -22,6 +22,14 @@
 .navbar {
   background-color: var(--clr-main);
 }
+.menu-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+.menu-link:hover {
+  text-decoration: underline;
+}
 
 .productos {
   display: grid;
@@ -49,7 +57,7 @@
   aspect-ratio: 2/1;
   object-fit: cover;
 }
-.producto .ver-mas {
+.producto .ver-mas, .finalizarcompra {
   text-decoration: none;
   background-color: var(--clr-main);
   color: white;
@@ -58,7 +66,7 @@
   border-radius: 0.5rem;
   transition: 0.2s;
 }
-.producto .ver-mas:hover {
+.producto .ver-mas:hover, .finalizarcompra:hover {
   background-color: wheat;
   color: black;
 }
@@ -93,7 +101,7 @@
   gap: 1rem;
   margin-top: 1rem;
 }
-.item-count button, .agregar-al-carrito, .enviar {
+.item-count button, .agregar-al-carrito, .enviar{
   background-color: var(--clr-main);
   border: 0;
   width: 2rem;
@@ -136,4 +144,17 @@
   outline: 0;
   border: 2px solid var(--clr-main);
   outline: 2px solid var(--clr-main);
+}
+button {
+  background-color: var(--clr-main);
+  color: white;
+  padding: 0.2rem;
+  transition: 0.2s;
+}
+.vaciar-carrito{
+  border-color: red;
+}
+button:hover {
+  background-color: wheat;
+  color: black;
 }
