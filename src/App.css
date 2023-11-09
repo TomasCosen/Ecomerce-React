@@ -158,3 +158,6 @@ button:hover {
   background-color: wheat;
   color: black;
 }
+.letra{
+  font-family: 'Playpen Sans', cursive;
+}
