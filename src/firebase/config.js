@@ -1,9 +1,8 @@
-
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAbGrHiGDaMwM_a4zP8NU3VjukddonYBnI",
+  apiKey: process.env.FIREBASE_KEY,
   authDomain: "dieteticasilvia.firebaseapp.com",
   projectId: "dieteticasilvia",
   storageBucket: "dieteticasilvia.appspot.com",
