@@ -26,12 +26,16 @@ const Checkout = () => {
                 return getDoc(productoRef)
                   .then((productoDoc) => {
                     const stockActual = productoDoc.data().stock;
-                    const nuevaCantidad = stockActual - producto.cantidad;
-
-                    return updateDoc(productoRef, { stock: nuevaCantidad});
+                    if(stockActual >= producto.cantidad){
+                      const nuevaCantidad = stockActual - producto.cantidad;
+                      return updateDoc(productoRef, { stock: nuevaCantidad});
+                    }else{
+                      throw new Error("No hay stock suficiente del siguiente producto para realizar la compra " + producto.name)
+                    }
                   })
                   .catch((error) => {
                     console.error("Error al obtener informacion de productos: ", error)
+                    throw error
                   });
               })
             ).then(() => {
