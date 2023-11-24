@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { CartContext } from "./CartContext/CartContext"
 import { useForm } from "react-hook-form";
-import { collection, addDoc} from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc, getDoc} from "firebase/firestore";
 import { db } from "../firebase/config";
 
 const Checkout = () => {
@@ -16,10 +16,29 @@ const Checkout = () => {
         total: precioTotal(),
     }
     const pedidosRef = collection( db, "Pedidos");
+
     addDoc(pedidosRef, pedido)
-        .then((doc) => {
-            setPedidoId(doc.id);
-            vaciarCarrito();
+        .then((docRef) => {
+            setPedidoId(docRef.id);
+            Promise.all(
+              carrito.map((producto) => {
+                const productoRef = doc(db, 'Productos', producto.id);
+                return getDoc(productoRef)
+                  .then((productoDoc) => {
+                    const stockActual = productoDoc.data().stock;
+                    const nuevaCantidad = stockActual - producto.cantidad;
+
+                    return updateDoc(productoRef, { stock: nuevaCantidad});
+                  })
+                  .catch((error) => {
+                    console.error("Error al obtener informacion de productos: ", error)
+                  });
+              })
+            ).then(() => {
+              vaciarCarrito();
+            });
+        }).catch((error) => {
+          console.error("Error al realizar la compra: ", error);
         })
   };
   if(pedidoId){
