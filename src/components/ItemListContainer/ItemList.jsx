@@ -7,7 +7,7 @@ const ItemList = ({ items, titulo }) => {
         <h2 className="main-title">{titulo}: </h2>
         <div className="productos">
           {items.map((item) => (
-            <Item item={item} key={item.id} />
+            <Item item={item} key={item._id} />
           ))}
         </div>
       </div>

@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {doc, getDoc} from "firebase/firestore";
+
 import ItemDetail from "./ItemDetail";
-import { db } from "../../firebase/config";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    const docRef = doc(db, "Productos", id);
-    getDoc(docRef)
-      .then((resp) => {
-        setItem(
-          {...resp.data(), id: resp.id}
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://dietetica-silvia.onrender.com/api/products/${id}`
         );
-      })
-
-    
+        const data = await response.json();
+        setItem(data);
+      } catch (e) {
+        console.error("Error fetching data", e);
+      }
+    };
+    fetchData();
   }, [id]);
+
   return (
     <div className="main-title">
-      {item ? <ItemDetail item={item} /> : <h2 className="container text-center">Cargando Datos...</h2> }  
+      {item ? (
+        <ItemDetail item={item} />
+      ) : (
+        <h2 className="container text-center">Cargando Datos...</h2>
+      )}
     </div>
-    
-  ) 
+  );
 };
 
 export default ItemDetailContainer;
